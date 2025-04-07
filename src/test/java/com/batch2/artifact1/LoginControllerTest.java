@@ -20,7 +20,7 @@ public class LoginControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    
+    @Autowired
     private LoginService loginService;
 
     @Test
