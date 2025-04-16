@@ -15,6 +15,5 @@ steps:
     inputs:
       mavenPomFile: 'pom.xml'  # Ensure the correct path to your pom.xml
       goals: 'clean test'
-      publishJUnitResults: true  # Publish JUnit test results
-      testResultsFiles: '**/target/surefire-reports/TEST-*.xml'
+
 
