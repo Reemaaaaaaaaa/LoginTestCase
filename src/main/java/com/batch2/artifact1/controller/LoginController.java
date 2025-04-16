@@ -35,7 +35,7 @@ public class LoginController {
         }
     }
     @GetMapping("/welcome")
-    public String showLoginForm() {
+    public String showWelcomePage() {
         return "welcome";
     }
 }
