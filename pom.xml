@@ -83,14 +83,14 @@
                 <source>21</source>      <!-- Change to 21 if using Java 21 -->
                 <target>21</target>      <!-- Change to 21 if using Java 21 -->
             </configuration>
-				<configuration>
+				
 					<annotationProcessorPaths>
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
 						</path>
 					</annotationProcessorPaths>
-				</configuration>
+				
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
