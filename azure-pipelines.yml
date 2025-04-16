@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'  # You can use 'windows-latest' or 'macos-latest' as well
 
 steps:
-  - task: Maven@3
+  - task: Maven@4
     displayName: 'Maven Build and Regression Test'
     inputs:
       mavenPomFile: 'pom.xml'  # Ensure the correct path to your pom.xml
@@ -18,9 +18,3 @@ steps:
       publishJUnitResults: true  # Publish JUnit test results
       testResultsFiles: '**/target/surefire-reports/TEST-*.xml'
 
-  - task: PublishTestResults@2
-    displayName: 'Publish Test Results'
-    inputs:
-      testResultsFiles: '**/target/surefire-reports/TEST-*.xml'
-      testRunTitle: 'Regression Tests'
-      failTaskOnFailedTests: true
