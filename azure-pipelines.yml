@@ -4,16 +4,20 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-  - main  # Adjust as per your branch strategy
+- main
 
 pool:
-  vmImage: 'ubuntu-latest'  # You can use 'windows-latest' or 'macos-latest' as well
+  vmImage: ubuntu-latest
 
 steps:
-  - task: Maven@4
-    displayName: 'Maven Build and Regression Test'
-    inputs:
-      mavenPomFile: 'pom.xml'  # Ensure the correct path to your pom.xml
-      goals: 'clean test'
-
+- task: Maven@4
+  inputs:
+    mavenPomFile: 'pom.xml'
+    mavenOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.21'
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    goals: 'test'
 
