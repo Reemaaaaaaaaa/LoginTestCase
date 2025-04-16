@@ -17,10 +17,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class LoginControllerTest {
 
-    @Autowired
+    @Mock
     private MockMvc mockMvc;
 
-    @Autowired
+    @InjectMocks
     private LoginService loginService;
 
     @Test
