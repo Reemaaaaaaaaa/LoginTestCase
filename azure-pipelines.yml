@@ -11,6 +11,7 @@ pool: reema
 steps:
 - task: Maven@4
   inputs:
+    versionSpec: '21'
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
